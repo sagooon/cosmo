@@ -1,0 +1,271 @@
+@font-face {
+    font-family: D-DINm;
+    src: url(/cosmo/lib/fonts/medium.otf) format("opentype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: block
+}
+
+@font-face {
+    font-family: D-DINb;
+    src: url(/cosmo/lib/fonts/bold.otf) format("opentype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: block
+}
+
+:root {
+    --fWm: D-DINm;
+    --fWb: D-DINb;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+    font-family: D-DINb;
+    font-weight: 300;
+}
+
+.cosmo {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    width: 210px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#navigation,
+#nav {
+    background: #000000;
+    padding-bottom: 15px;
+    font-family: D-DINb;
+    text-transform: uppercase;
+    align-items: center;
+    display: flex;
+    padding: 12px 210px;
+}
+
+#nav li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+#nav li a {
+    transition: .3s;
+    color: rgb(255, 255, 255);
+}
+
+#redirect {
+    color: aliceblue;
+    position: absolute;
+    right: 40px;
+    margin-right: 40px;
+    border: 1px solid aliceblue;
+    padding: 5px 14px 5px 14px;
+    transition: .8s;
+    overflow: hidden;
+}
+
+#redirect:hover {
+    color: #000;
+    background-color: aliceblue;
+}
+
+.navAnimate::after {
+    content: "";
+    height: 1px;
+    width: 0%;
+    background-color: #fff;
+    display: block;
+    transition: .5s ease-in-out;
+}
+
+.navAnimate:hover::after {
+    content: "";
+    height: 1px;
+    width: 0100%;
+    background-color: #fff;
+    display: block;
+}
+
+.main {
+    width: 100%;
+    height: auto;
+}
+
+.title {
+    color: #fff;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.main p {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: var(--fWm);
+    font-size: 21px;
+}
+
+.descript {
+    position: absolute;
+    left: 650px;
+    top: 460px;
+}
+
+.media {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .media {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .media {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.earth img {
+    position: relative;
+    margin-top: 100px;
+    z-index: -1;
+    height: auto;
+    width: 100%;
+}
+
+.earthdescript {
+    color: aliceblue;
+    font-family: var(--fWm);
+    text-transform: uppercase;
+    font-size: 21px;
+    position: relative;
+    bottom: 420px;
+    left: 765px;
+    max-width: fit-content;
+}
+
+.ssdescript {
+    color: aliceblue;
+    font-family: var(--fWm);
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 21px;
+    position: relative;
+    bottom: 220px;
+    left: 100px;
+    max-width: fit-content;
+}
+
+.btn {
+    font-family: var(--fWb);
+    font-size: 22px;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: aliceblue;
+    position: absolute;
+    right: 40px;
+    margin-right: 40px;
+    border: 1px solid aliceblue;
+    padding: 10px 14px 10px 14px;
+    transition: .8s;
+    overflow: hidden;
+}
+
+.earthB {
+    position: relative;
+    bottom: 400px;
+    left: 765px;
+}
+
+.ss {
+    position: relative;
+    bottom: 200px;
+    left: 100px;
+}
+
+.moondescript {
+    color: aliceblue;
+    font-family: var(--fWm);
+    text-transform: uppercase;
+    font-size: 21px;
+    position: relative;
+    bottom: 420px;
+    left: 765px;
+    max-width: fit-content;
+}
+
+.moonB {
+    position: relative;
+    bottom: 400px;
+    left: 765px;
+}
+
+.marsdescript {
+    color: aliceblue;
+    font-family: var(--fWm);
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 21px;
+    position: relative;
+    bottom: 320px;
+    left: 100px;
+    max-width: fit-content;
+}
+
+.marsB {
+    position: relative;
+    bottom: 300px;
+    left: 100px;
+}
+
+.btn:hover {
+    color: #000;
+    background-color: aliceblue;
+}
+
+.spacestation img {
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.moon img {
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.mars img {
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, rgb(0, 0, 0));
+    border-radius: 6px;
+}
